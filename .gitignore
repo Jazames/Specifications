@@ -1,0 +1,8 @@
+*.gz
+*.aux
+*.log
+*.py
+*.toc
+*.err
+.DS_Store
+*.out
