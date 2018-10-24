@@ -1,204 +1,204 @@
 \section{ENGINEERING REQUIREMENTS}
 
-\begin{slshape} 
-\color{blue}
-	This section constitutes the meat of the document. Remember that it is ''requirements" and not methods. The 
-	definition here should leave no doubt about what is needed.  Engineering requirements differ from stakeholder requirements in measurability, detail, and unambiguity.
-	\bigskip
-	
-	Measurability is a key attribute; without it we have no way of knowing that we have built what we said that we would build.  In the aerospace industry 
-	the process of determining that what we have built meets the plan to which we were building is called verification.  Verification answers the question,
-	``Did we build what we said we would build?"
-	\bigskip
-	
-	Ideally, detail in engineering requirements means that the designer can set off designing and building the system with little or no extra input from the stakeholders.  
-	Since we do not live in an ideal world additional stakeholder input will be required.  When additional input is sought the specification should be revised to reflect clarification
-	or change.  Reality is why we include a Revision History Block at the beginning of the specification.
-	\bigskip
-	
-	An ambiguous requirement, by its very nature, means that I could design and build the system in one, two, or many `wrong' ways.  Since the stakeholder who is paying for this system doesn't want one of the many possible wrong ways we need to ensure that requirements cannot be misinterpreted by the designer. 
- \bigskip
-	
-	
-	
-	Understand:
-		\begin{enumerate}
-			\item ``An engineering requirement is a statement about the system that is unambiguous. There's only one way it can be interpreted, 
-							and the idea is expressed clearly so all of the stakeholders understand it."
-			\item ``An engineering requirement is binding. The customer is willing to pay for it, and will not accept the system without it."
-			\item	``An engineering requirement is testable. It's possible to show that the system either does or does not comply with the statement." (Steve Tockey)
-		\end{enumerate}
-		
-Additionally, requirements must be stated in one place only in this document.  You can reference the requirement in another part of the document by using its paragraph number.  It is often tempting to restate a requirement in another requirement to improve clarity.  However, a requirement stated in two places may only get changed in one place during a revision and possibly  leading to confusion or worse a flawed product.
-\bigskip
-		
-Engineering requirements constitute contacts between between clients and design teams.  Requirements are binding.
-\bigskip		
-		
-Requirements form the base that we design on.  A well written requirement keeps us from ending up with a less than ideal implementation.  
-Defining requirements forces us to think prior to design.
-\bigskip
-		
-The engineer's job at this point is to make the stakeholder requirements of the previous section into measurable, detailed, and unambiguous.  
-Sometimes this process requires that a stakeholder be interviewed again until a proper set of engineering requirements emerge.
-\bigskip 
-
-An old joke in aerospace says that a specification is written and thrown over a high wall to the design group.  The spec. writer then runs away from the wall (laughing).  While formal adoption of this absurd method leads to disaster, we should write specifications as if we could never clarify anything.  The clearer we make the specification now, the lower the cost of change later.
-\bigskip
-
-
-
-\subsection*{\underline{Processing Stakeholder Requirements into Engineering Requirements}}
-
-Stakeholder requirements in the form of user stories are typically poorly organized and indefinite.  A designer cannot design to an indefinite requirement.  How would a designer know if an indefinite requirement was met?  Also, different stakeholders may have requirements that effect overlapping areas of the system but because of the nature of story collection the overlap in these requirements may not be obvious.  There are many more issues and a systematic approach to this processing problem should help. 
-\bigskip
-
-The work of sorting and firming up requirements can be considered tedious.  Engineers are famous for hating tedious work.  It is why we are constantly automating things that we don't want to do.  And when we encounter a tedious task we have a tendency to create a process to limit the amount of tedium that we must endure.  Tedious work reduced to a process becomes less tedious if the process is well designed.  In order to translate the scattered and indefinite stakeholder requirement into organized and definite engineering requirements we are going to follow a two step process:
-
-\begin{enumerate}
-\item Identify and sort stakeholder requirements into fixed categories.
-\item Rewrite the sorted requirements into definitive engineering requirements.
-\end{enumerate}
-
-The details of the process are explained in the following sections.
-
-\subsubsection*{\underline{Identifying and Sorting the Stakeholder Requirements}}
-
-At this point in the process we are faced with the task of identifying and sorting the requirements found in the user stories.  Finding the requirements is pretty easy.  The user wants us to do something and that something is a requirement.  Sorting the requirements is only slightly more difficult because we need bins for the different categories of requirements.  Different companies come up with different bins so I don't feel too bad at coming up with my own set of bins.
-\bigskip
-
-
-
-It helps me to think of the process of translating stakeholder user stories into engineering requirements as a machine with several stages.  We take the often less than definite requirements that we find in user stories, clarify the untranslatable stuff, and sort the results into applicable categories.  The first stage of the process is illustrated in Figure \ref{fig:PreliminarySorting}.
-\bigskip
-
-\begin{figure}[tb]
-\centering
-\includegraphics[angle=0,width=15cm]{PreliminarySorting.pdf}
-\caption{\label{fig:PreliminarySorting} A machine that sorts user stories into appropriate categories.}
-\end{figure}
-
-
-
-\begin{minipage}{\textwidth}
-	We will be sorting the requirements into four categories:
-	\begin{itemize}
-		\item Untranslatable Stuff
-		\item Interface Stuff
-		\item Functional Stuff
-		\item Non-Functional (Support) Stuff
-	\end{itemize}
-\end{minipage}
-
-\bigskip
-
-%These categories shown in the illustration are:
+%\begin{slshape} 
+%\color{blue}
+%	This section constitutes the meat of the document. Remember that it is ''requirements" and not methods. The 
+%	definition here should leave no doubt about what is needed.  Engineering requirements differ from stakeholder requirements in measurability, detail, and unambiguity.
+%	\bigskip
+%	
+%	Measurability is a key attribute; without it we have no way of knowing that we have built what we said that we would build.  In the aerospace industry 
+%	the process of determining that what we have built meets the plan to which we were building is called verification.  Verification answers the question,
+%	``Did we build what we said we would build?"
+%	\bigskip
+%	
+%	Ideally, detail in engineering requirements means that the designer can set off designing and building the system with little or no extra input from the stakeholders.  
+%	Since we do not live in an ideal world additional stakeholder input will be required.  When additional input is sought the specification should be revised to reflect clarification
+%	or change.  Reality is why we include a Revision History Block at the beginning of the specification.
+%	\bigskip
+%	
+%	An ambiguous requirement, by its very nature, means that I could design and build the system in one, two, or many `wrong' ways.  Since the stakeholder who is paying for this system doesn't want one of the many possible wrong ways we need to ensure that requirements cannot be misinterpreted by the designer. 
+% \bigskip
+%	
+%	
+%	
+%	Understand:
+%		\begin{enumerate}
+%			\item ``An engineering requirement is a statement about the system that is unambiguous. There's only one way it can be interpreted, 
+%							and the idea is expressed clearly so all of the stakeholders understand it."
+%			\item ``An engineering requirement is binding. The customer is willing to pay for it, and will not accept the system without it."
+%			\item	``An engineering requirement is testable. It's possible to show that the system either does or does not comply with the statement." (Steve Tockey)
+%		\end{enumerate}
+%		
+%Additionally, requirements must be stated in one place only in this document.  You can reference the requirement in another part of the document by using its paragraph number.  It is often tempting to restate a requirement in another requirement to improve clarity.  However, a requirement stated in two places may only get changed in one place during a revision and possibly  leading to confusion or worse a flawed product.
+%\bigskip
+%		
+%Engineering requirements constitute contacts between between clients and design teams.  Requirements are binding.
+%\bigskip		
+%		
+%Requirements form the base that we design on.  A well written requirement keeps us from ending up with a less than ideal implementation.  
+%Defining requirements forces us to think prior to design.
+%\bigskip
+%		
+%The engineer's job at this point is to make the stakeholder requirements of the previous section into measurable, detailed, and unambiguous.  
+%Sometimes this process requires that a stakeholder be interviewed again until a proper set of engineering requirements emerge.
+%\bigskip 
+%
+%An old joke in aerospace says that a specification is written and thrown over a high wall to the design group.  The spec. writer then runs away from the wall (laughing).  While formal adoption of this absurd method leads to disaster, we should write specifications as if we could never clarify anything.  The clearer we make the specification now, the lower the cost of change later.
+%\bigskip
+%
+%
+%
+%\subsection*{\underline{Processing Stakeholder Requirements into Engineering Requirements}}
+%
+%Stakeholder requirements in the form of user stories are typically poorly organized and indefinite.  A designer cannot design to an indefinite requirement.  How would a designer know if an indefinite requirement was met?  Also, different stakeholders may have requirements that effect overlapping areas of the system but because of the nature of story collection the overlap in these requirements may not be obvious.  There are many more issues and a systematic approach to this processing problem should help. 
+%\bigskip
+%
+%The work of sorting and firming up requirements can be considered tedious.  Engineers are famous for hating tedious work.  It is why we are constantly automating things that we don't want to do.  And when we encounter a tedious task we have a tendency to create a process to limit the amount of tedium that we must endure.  Tedious work reduced to a process becomes less tedious if the process is well designed.  In order to translate the scattered and indefinite stakeholder requirement into organized and definite engineering requirements we are going to follow a two step process:
 %
 %\begin{enumerate}
-%\item \colorbox{Goldenrod}{Interface Constraints}
-%\item \colorbox{Lavender}{Method Constraints}
-%\item \colorbox{red}{Functional Requirements}
-%\item \colorbox{green}{Non-Functional Requirements (better called Functional Support Requirements)}
-%\item \colorbox{YellowOrange}{Options}
-%\item (Fluff)
+%\item Identify and sort stakeholder requirements into fixed categories.
+%\item Rewrite the sorted requirements into definitive engineering requirements.
 %\end{enumerate}
 %
-%The colors shown in the above list will be used to highlight pieces of the example stakeholder user stories that correspond to the categories.
+%The details of the process are explained in the following sections.
+%
+%\subsubsection*{\underline{Identifying and Sorting the Stakeholder Requirements}}
+%
+%At this point in the process we are faced with the task of identifying and sorting the requirements found in the user stories.  Finding the requirements is pretty easy.  The user wants us to do something and that something is a requirement.  Sorting the requirements is only slightly more difficult because we need bins for the different categories of requirements.  Different companies come up with different bins so I don't feel too bad at coming up with my own set of bins.
 %\bigskip
-
-The categories themselves are intended to cover all aspects of the project in a systematic and an understandable fashion.  Properly chosen categories allow the designer working from this specification to verbally see the system (don't worry, we will also draw a few actual pictures of the system).  I'll explain the categories in the next sections.
-
-\paragraph*{Untranslatable Stuff}
-
-Let's face it we're human and our project stakeholders are human.  Being human we don't always communicate what is either meaningful or useful.  Sometimes, as engineers, when we hear or read a stakeholder statement it may seem vague or more like a wish.  Sometimes the statement may be incredibly obvious, but hard to translate into a measurable requirement.  When we encounter such statements it is up to us to approach the individual stakeholder and ask (politely) what on earth the statement means in terms of the project deliverables.
-\bigskip  
-
-Interacting with our stakeholders early in a project is a good thing.  We establish the lines of communication that we will most definitely need sometime in the project.
-\bigskip
-
-\paragraph*{Interface Stuff}
-
-We design and build things to perform some useful or interesting function.  Interesting things interact or interface with their environment to send information, provide motive power, receive and process information, receive power, fit into an existing slot, etc.  Interfaces make up the useful pieces of a system and are critical to the system.
-\bigskip
-
-The documentation for many complex systems includes a very useful document called an Interface Control Document, or ICD for short.  This document contains all the interface information for the system.  It is a very useful document and helps designers avoid a host of errors.  If such a document is available when the specification document is being written then it is simply referenced in the Applicable Documents Section of the specification.  For our purposes we will define the interface requirements as part of this specification document.
-\bigskip
-
-\paragraph*{Functional Stuff}
-
-The devices we make are intended to do something.  The something that they are supposed to do is defined as functional constraints (designer's hands tied) and functional requirements (designer is free to choose the method).
-\bigskip
-
-
-\paragraph*{Non-Functional (Support) Stuff}
-
-The engineered system is designed to produce certain things and interface in certain ways.  To accomplish its function the system needs a lot of support.  For example, a system is designed to process input data in a specific digital format and output the processed data in a specific digital format.  The format constitute interface constraints, but the connector for the digital formats constitute non-functional or functional support interface constraints.
-\bigskip
-
-The box that keeps the system from getting wet constitutes a non-functional or functional support requirement while the data processing requirements constitute a functional requirement.  Meeting non-functional requirements is as necessary to the system as meeting functional requirements.
-\bigskip
-
-Let's return to the example and start sorting the stakeholder user stories into the four categories.  The stories will be highlighted using four colors with the following meaning:
-\bigskip
-
-\end{slshape}
-
-\begin{enumerate}
-	\item \hilite{Cyan}{Untranslatable Stuff}
-	\item \hilite{Goldenrod}{Interface Stuff}
-	\item \hilite{Magenta}{Requirements Stuff}
-	\item \hilite{Apricot}{Non-Functional Stuff}
-\end{enumerate}
-
-\begin{slshape}
-\color{blue}
-Beginning with the Course Instructor's Pedagogical Requirements.  The marked version is:
-\end{slshape}
-\bigskip
-
-\begin{python}
-TheFile = open('CourseInstructorHandsOn.tex')
-
-lines = TheFile.readlines()
-
-markedLines = [0,3,6,9,12,15,18,21]
-
-hilite = ['Cyan','Cyan','Cyan','Magenta','Magenta','Magenta','Goldenrod','Magenta']
-
-for everyline in markedLines:
-
-    newstring = '\hilite{'+hilite[markedLines.index(everyline)]+'}{'+lines[everyline].rstrip('\n')+'}'
-
-    print(newstring+'\n'+'\\bigskip'+'\n')
-
-TheFile.close()
-\end{python}
-
-\begin{slshape}
-\color{blue}
-
-The Course Instructor's Pedagogical Requirements has one item classified as Interface Stuff dealing with the input impedance of the amplifier.  This item must be further sorted by the machine in Figure \ref{fig:InterfaceSorting}.  This machine determines if the item is a constraint or a requirement.
-
-\end{slshape}
-
-\begin{figure}[tb]
-\centering
-\includegraphics[angle=0,width=15cm]{InterfaceSorting.pdf}
-\caption{\label{fig:InterfaceSorting} A machine that sorts Interface Stuff into appropriate categories.}
-\end{figure}
-
-\begin{figure}[tb]
-\centering
-\includegraphics[angle=0,width=15cm]{FunctionalSorting.pdf}
-\caption{\label{fig:FunctionalSorting} A machine that sorts Functional Stuff into appropriate categories.}
-\end{figure} 
-
-\begin{figure}[tb]
-\centering
-\includegraphics[angle=0,width=15cm]{NonFunctionalSorting.pdf}
-\caption{\label{fig:NonFunctionalSorting} A machine that sorts Non-Functional Stuff into appropriate categories.}
-\end{figure}
-
+%
+%
+%
+%It helps me to think of the process of translating stakeholder user stories into engineering requirements as a machine with several stages.  We take the often less than definite requirements that we find in user stories, clarify the untranslatable stuff, and sort the results into applicable categories.  The first stage of the process is illustrated in Figure \ref{fig:PreliminarySorting}.
+%\bigskip
+%
+%\begin{figure}[tb]
+%\centering
+%\includegraphics[angle=0,width=15cm]{PreliminarySorting.pdf}
+%\caption{\label{fig:PreliminarySorting} A machine that sorts user stories into appropriate categories.}
+%\end{figure}
+%
+%
+%
+%\begin{minipage}{\textwidth}
+%	We will be sorting the requirements into four categories:
+%	\begin{itemize}
+%		\item Untranslatable Stuff
+%		\item Interface Stuff
+%		\item Functional Stuff
+%		\item Non-Functional (Support) Stuff
+%	\end{itemize}
+%\end{minipage}
+%
+%\bigskip
+%
+%%These categories shown in the illustration are:
+%%
+%%\begin{enumerate}
+%%\item \colorbox{Goldenrod}{Interface Constraints}
+%%\item \colorbox{Lavender}{Method Constraints}
+%%\item \colorbox{red}{Functional Requirements}
+%%\item \colorbox{green}{Non-Functional Requirements (better called Functional Support Requirements)}
+%%\item \colorbox{YellowOrange}{Options}
+%%\item (Fluff)
+%%\end{enumerate}
+%%
+%%The colors shown in the above list will be used to highlight pieces of the example stakeholder user stories that correspond to the categories.
+%%\bigskip
+%
+%The categories themselves are intended to cover all aspects of the project in a systematic and an understandable fashion.  Properly chosen categories allow the designer working from this specification to verbally see the system (don't worry, we will also draw a few actual pictures of the system).  I'll explain the categories in the next sections.
+%
+%\paragraph*{Untranslatable Stuff}
+%
+%Let's face it we're human and our project stakeholders are human.  Being human we don't always communicate what is either meaningful or useful.  Sometimes, as engineers, when we hear or read a stakeholder statement it may seem vague or more like a wish.  Sometimes the statement may be incredibly obvious, but hard to translate into a measurable requirement.  When we encounter such statements it is up to us to approach the individual stakeholder and ask (politely) what on earth the statement means in terms of the project deliverables.
+%\bigskip  
+%
+%Interacting with our stakeholders early in a project is a good thing.  We establish the lines of communication that we will most definitely need sometime in the project.
+%\bigskip
+%
+%\paragraph*{Interface Stuff}
+%
+%We design and build things to perform some useful or interesting function.  Interesting things interact or interface with their environment to send information, provide motive power, receive and process information, receive power, fit into an existing slot, etc.  Interfaces make up the useful pieces of a system and are critical to the system.
+%\bigskip
+%
+%The documentation for many complex systems includes a very useful document called an Interface Control Document, or ICD for short.  This document contains all the interface information for the system.  It is a very useful document and helps designers avoid a host of errors.  If such a document is available when the specification document is being written then it is simply referenced in the Applicable Documents Section of the specification.  For our purposes we will define the interface requirements as part of this specification document.
+%\bigskip
+%
+%\paragraph*{Functional Stuff}
+%
+%The devices we make are intended to do something.  The something that they are supposed to do is defined as functional constraints (designer's hands tied) and functional requirements (designer is free to choose the method).
+%\bigskip
+%
+%
+%\paragraph*{Non-Functional (Support) Stuff}
+%
+%The engineered system is designed to produce certain things and interface in certain ways.  To accomplish its function the system needs a lot of support.  For example, a system is designed to process input data in a specific digital format and output the processed data in a specific digital format.  The format constitute interface constraints, but the connector for the digital formats constitute non-functional or functional support interface constraints.
+%\bigskip
+%
+%The box that keeps the system from getting wet constitutes a non-functional or functional support requirement while the data processing requirements constitute a functional requirement.  Meeting non-functional requirements is as necessary to the system as meeting functional requirements.
+%\bigskip
+%
+%Let's return to the example and start sorting the stakeholder user stories into the four categories.  The stories will be highlighted using four colors with the following meaning:
+%\bigskip
+%
+%\end{slshape}
+%
+%\begin{enumerate}
+%	\item \hilite{Cyan}{Untranslatable Stuff}
+%	\item \hilite{Goldenrod}{Interface Stuff}
+%	\item \hilite{Magenta}{Requirements Stuff}
+%	\item \hilite{Apricot}{Non-Functional Stuff}
+%\end{enumerate}
+%
+%\begin{slshape}
+%\color{blue}
+%Beginning with the Course Instructor's Pedagogical Requirements.  The marked version is:
+%\end{slshape}
+%\bigskip
+%
+%\begin{python}
+%TheFile = open('CourseInstructorHandsOn.tex')
+%
+%lines = TheFile.readlines()
+%
+%markedLines = [0,3,6,9,12,15,18,21]
+%
+%hilite = ['Cyan','Cyan','Cyan','Magenta','Magenta','Magenta','Goldenrod','Magenta']
+%
+%for everyline in markedLines:
+%
+%    newstring = '\hilite{'+hilite[markedLines.index(everyline)]+'}{'+lines[everyline].rstrip('\n')+'}'
+%
+%    print(newstring+'\n'+'\\bigskip'+'\n')
+%
+%TheFile.close()
+%\end{python}
+%
+%\begin{slshape}
+%\color{blue}
+%
+%The Course Instructor's Pedagogical Requirements has one item classified as Interface Stuff dealing with the input impedance of the amplifier.  This item must be further sorted by the machine in Figure \ref{fig:InterfaceSorting}.  This machine determines if the item is a constraint or a requirement.
+%
+%\end{slshape}
+%
+%\begin{figure}[tb]
+%\centering
+%\includegraphics[angle=0,width=15cm]{InterfaceSorting.pdf}
+%\caption{\label{fig:InterfaceSorting} A machine that sorts Interface Stuff into appropriate categories.}
+%\end{figure}
+%
+%\begin{figure}[tb]
+%\centering
+%\includegraphics[angle=0,width=15cm]{FunctionalSorting.pdf}
+%\caption{\label{fig:FunctionalSorting} A machine that sorts Functional Stuff into appropriate categories.}
+%\end{figure} 
+%
+%\begin{figure}[tb]
+%\centering
+%\includegraphics[angle=0,width=15cm]{NonFunctionalSorting.pdf}
+%\caption{\label{fig:NonFunctionalSorting} A machine that sorts Non-Functional Stuff into appropriate categories.}
+%\end{figure}
+%
 
 %
 %
@@ -538,27 +538,43 @@ The Course Instructor's Pedagogical Requirements has one item classified as Inte
 %Continuing the search for constraints in the stakeholder's user stories.  The next course instructor comment mentions:
 %\end{slshape}
 %
-\subsection{Interface}
+\subsection{Item Definition} 
+The Backyard Splash Pad is comprised of four main components: a device controller, a user interface, a mechanical system, and an object-tracking system. 
+The device controller receives input from the user interface and uses it to control the mechanical system.
+The user interface presents information about the system to the user and accepts input from the user.
+The mechanical system controls the flow of water. 
+The object-tracking system detects objects near the Splash Pad and reports information to the controller. 
+See Figure \ref{fig:functional_diagram}.
 
-\subsubsection{Interface Method Design Constraints}
+\subsubsection{Functional Diagram}
 
-\subsubsection{Interface Design Requirements}
-
-\subsubsection{Interface Support Design Constraints}
-
-\subsubsection{Interface Support Design Requirements}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics{Functional_Diagram.png}
+\caption{\label{fig:functional_diagram}Functional Diagram.}
+\end{centering}
+\end{figure}
 
 \subsection{Functional Requirements}
 
-\subsubsection{Functional Method Design Constraints}
+\subsubsection{Device Controller Functional Requirements}
 
-\subsubsection{Functional Design Requirements}
+\subsubsection{User Interface Functional Requirements}
+
+\subsubsection{Mechanical System Functional Requirements}
+
+\subsubsection{Object Tracking System Functional Requirements}
 
 \subsection{Support Requirements}
 
-\subsubsection{Support Method Design Constraints}
+\subsubsection{Device Controller Support Requirements}
 
-\subsubsection{Support Design Requirements} 
+\subsubsection{User Interface Support Requirements}
+
+\subsubsection{Mechanical System Support Requirements}
+
+\subsubsection{Object Tracking System Support Requirements}
+
 
 
 %\begin{quote}
