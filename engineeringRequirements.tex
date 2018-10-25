@@ -1,7 +1,7 @@
 %\newpage
 \section{ENGINEERING REQUIREMENTS}
 
-\subsection{Item Definition} 
+\subsection{System Overview} 
 The Backyard Splash Pad is comprised of four main components: a device controller, a user interface, a mechanical system, and an object-tracking system. 
 The device controller receives input from the user interface and uses it to control the mechanical system.
 The user interface presents information about the system to the user and accepts input from the user.
@@ -17,11 +17,10 @@ See Figure \ref{fig:functional_diagram}.
 \caption{\label{fig:functional_diagram}Functional Diagram.}
 \end{figure}
 
-
-
 \subsection{Functional Requirements}
 
 \subsubsection{Controller}
+The controller is the part of the system that controls the physical outputs. 
 
 \paragraph{Stream Control}
 The controller shall be able to turn on and off each water stream individually.
@@ -39,6 +38,7 @@ The controller shall be able to turn on a specified nozzle as directed by the Ob
 The controller shall have at least one pre-programmed fountain routine containing light changes and water streams turning on and off.
 
 \subsubsection{User Interface}
+The user interface is the part of the system that accepts input from the user and translates it into commands that the controller can execute. 
 
 \paragraph{User Nozzle Control}
 The user interface shall allow the user to select what nozzle(s) are turned on.
@@ -50,6 +50,7 @@ The user interface shall allow the user to select what color the LEDs are.
 The user interface shall allow the user to enable or disable the object tracking system.
 
 \subsubsection{Mechanical System}
+The mechanical system is the physical aspect of the system. The mechanical system produces all of the functional output of the system. 
 
 \paragraph{Water Flow}
 The mechanical system shall be able to create seven water streams that are 6.0 ft or less. 
@@ -66,12 +67,16 @@ The mechanical system shall not provide electrical shock to users.
 %Answer: Use every-spec
 
 \subsubsection{Object Tracking System}
+The Object Tracking System is the part of the system that senses objects in the area surrounding the splash pad, and sends commands to the controller based on the position of objects detected.
 
 \paragraph{Minimum Object Size}
 The object tracking system shall be able to detect any object larger than an NBA regulation sized basketball that is within 2.0 ft of any nozzle.
 
 \paragraph{Lighting Levels}
 The object tracking system shall be able to function when the sun is 20 degrees above the horizon.%solar eclipses?  
+
+\paragraph{Automatic Calibration}
+The Object Tracking System may be able to automatically adjust to differences if its position relative to the splash pad is changes. 
 
 \subsection{Support Requirements}
 
@@ -80,7 +85,7 @@ The object tracking system shall be able to function when the sun is 20 degrees 
 \subsubsection{User Interface}
 
 \paragraph{Interface Platform}
-The user interface shall require an android phone for more advanced features. 
+The User Interface may require an android phone for more advanced features. 
 
 \subsubsection{Mechanical System}
 
