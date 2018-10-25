@@ -96,7 +96,6 @@ The tester verifies that everything that the stakeholders have asked for are cov
 \end{slshape}
 
 
-
 \subsection{Item Definition} 
 The Backyard Splash Pad is comprised of four main components: a device controller, a user interface, a mechanical system, and an object-tracking system. 
 The device controller receives input from the user interface and uses it to control the mechanical system.
@@ -108,52 +107,97 @@ See Figure \ref{fig:functional_diagram}.
 \subsubsection{Functional Diagram}
 
 \begin{figure}[h]
-\begin{centering}
-\includegraphics{Functional_Diagram.png}
+\centering
+\includegraphics[width=0.9\textwidth]{Functional_Diagram.png}
 \caption{\label{fig:functional_diagram}Functional Diagram.}
-\end{centering}
 \end{figure}
+
+
 
 \subsection{Functional Requirements}
 
 \subsubsection{Controller}
-\paragraph{The controller shall be able to turn on and off each nozzle individually.}
-\paragraph{The controller shall be able to turn on and off each light individually.}
-\paragraph{The controller shall be able to change the color of each light individually.}
-\paragraph{The controller shall be able to turn on a specified nozzle as directed by the Object Tracking System.}
+
+\paragraph{Stream Control}
+The controller shall be able to turn on and off each water stream individually.
+
+\paragraph{Light Control}
+The controller shall be able to turn on and off each light individually.
+
+\paragraph{Color Control}
+The controller shall be able to change the color of each light individually.
+
+\paragraph{Responsive to Object Tracking System} 
+The controller shall be able to turn on a specified nozzle as directed by the Object Tracking System.
+
+\paragraph{Programmed Display}
+The controller shall have at least one pre-programmed fountain routine containing light changes and water streams turning on and off.
 
 \subsubsection{User Interface}
-\paragraph{The user interface shall allow the user to select what nozzle(s) are turned on.}
-\paragraph{The user interface shall allow the user to select what color the LEDs are.}
+
+\paragraph{User Nozzle Control}
+The user interface shall allow the user to select what nozzle(s) are turned on.
+
+\paragraph{User Color Control}
+The user interface shall allow the user to select what color the LEDs are.
+
+\paragraph{User Object Tracking Control}
+The user interface shall allow the user to enable or disable the object tracking system.
 
 \subsubsection{Mechanical System}
-\paragraph{The mechanical system shall be able to create seven water streams that are 6.0 ft or less. }
-\paragraph{The mechanical system shall conform to the IP65 standard.   }
-\paragraph{The mechanical system shall be able to operate continuously for 10 minutes. }
-\paragraph{The mechanical system shall not provide electrical shock to users. }
+
+\paragraph{Water Flow}
+The mechanical system shall be able to create seven water streams that are 6.0 ft or less. 
+
+\paragraph{Water and Dust Resistance}
+The mechanical system shall conform to the IP65 standard.   
+
+\paragraph{Operation Time}
+The mechanical system shall be able to operate continuously for 10 minutes. 
+
+\paragraph{Safety}
+The mechanical system shall not provide electrical shock to users. 
 %Ask Dr. Cripps how to get access to standards. 
+%Answer: Use every-spec
 
 \subsubsection{Object Tracking System}
-\paragraph{The object tracking system shall be able to detect any object larger than an NBA regulation sized basketball that is within 2.0 ft of any nozzle.}
-\paragraph{The object tracking system shall be able to function when the sun is 20 degrees above the horizon. }%solar eclipses?  
+
+\paragraph{Minimum Object Size}
+The object tracking system shall be able to detect any object larger than an NBA regulation sized basketball that is within 2.0 ft of any nozzle.
+
+\paragraph{Lighting Levels}
+The object tracking system shall be able to function when the sun is 20 degrees above the horizon.%solar eclipses?  
 
 \subsection{Support Requirements}
 
 \subsubsection{Device Controller}
 
 \subsubsection{User Interface}
-\paragraph{The user interface shall require an android phone for more advanced features. }
+
+\paragraph{Interface Platform}
+The user interface shall require an android phone for more advanced features. 
 
 \subsubsection{Mechanical System}
-\paragraph{The system shall operate on 1000.0 Watts or less.}
-\paragraph{The system shall be powered by a standard 120 V electrical outlet. }
-\paragraph{The system shall fit within a cube that is 10 ft on an edge.}
+
+\paragraph{Power Consumption}
+The system shall operate on 1000.0 Watts or less.
+
+\paragraph{Power Supply}
+The system shall be powered by a standard 120 V electrical outlet. 
+
+\paragraph{Size}
+The system shall fit within a cube that is 10 ft on an edge.
 
 \subsubsection{Object Tracking System}
-\paragraph{The object tracking system shall fit within a cube that is 6 inches on a side.}
-\paragraph{The object tracking system shall have a case. }
-\paragraph{The object tracking system case shall have a mounting interface. }
 
+\paragraph{Size}
+The object tracking system shall fit within a cube that is 6 inches on a side.
+
+\paragraph{Container}
+The object tracking system shall have a case. 
+
+\paragraph{Mounting}
+The object tracking system case shall have a mounting interface. 
 
 
 
