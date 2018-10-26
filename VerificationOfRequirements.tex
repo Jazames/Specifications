@@ -102,76 +102,95 @@ The device controller receives input from the user interface and uses it to cont
 The user interface presents information about the system to the user and accepts input from the user.
 The mechanical system controls the flow of water. 
 The object-tracking system detects objects near the Splash Pad and reports information to the controller. 
-See Figure \ref{fig:functional_diagram}.
+See Figure \ref{fig:functional_diagram_}.
 
 \subsubsection{Functional Diagram}
+Test by confirming that each element of the functional diagram is present in the final design. 
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\textwidth]{Functional_Diagram.png}
-\caption{\label{fig:functional_diagram}Functional Diagram.}
+\caption{\label{fig:functional_diagram_}Functional Diagram.}
 \end{figure}
 
 \subsection{Functional Requirements}
 
 \subsubsection{Controller}
-The controller is the part of the system that controls the physical outputs. 
+%The controller is the part of the system that controls the physical outputs. 
 
 \paragraph{Stream Control}
-The controller shall be able to turn on and off each water stream individually.
+%The controller shall be able to turn on and off each water stream individually.
+Test by observing that each stream turns on and turns off.
 
 \paragraph{Light Control}
-The controller shall be able to turn on and off each light individually.
+%The controller shall be able to turn on and off each light individually.
+Test by observing that each light turns on and turns off.
 
 \paragraph{Color Control}
-The controller shall be able to change the color of each light individually.
+%The controller shall be able to change the color of each light individually.
+Test by observing that each light changes color.
 
 \paragraph{Responsive to Object Tracking System} 
-The controller shall be able to turn on a specified nozzle as directed by the Object Tracking System.
+%The controller shall be able to turn on a specified nozzle as directed by the Object Tracking System.
+Enable the object tracking system. Observe that a water stream turns on due to input from the Object Tracking System.
 
 \paragraph{Programmed Display}
-The controller shall have at least one pre-programmed fountain routine containing light changes and water streams turning on and off.
+%The controller shall have at least one pre-programmed fountain routine containing light changes and water streams turning on and off.
+Use the user interface to run the fountain routine. Observe that lights change and water streams turn on and off.
 
 \subsubsection{User Interface}
-The user interface is the part of the system that accepts input from the user and translates it into commands that the controller can execute. 
+%The user interface is the part of the system that accepts input from the user and translates it into commands that the controller can execute. 
+
 
 \paragraph{User Nozzle Control}
-The user interface shall allow the user to select what nozzle(s) are turned on.
+%The user interface shall allow the user to select what nozzle(s) are turned on.
+Use the user interface to turn on a water stream. Observe that the water stream turns on.
 
 \paragraph{User Color Control}
-The user interface shall allow the user to select what color the LEDs are.
+%The user interface shall allow the user to select what color the LEDs are.
+Use the user interface to change the color of a light. Observe that the color of the light changes. 
 
 \paragraph{User Object Tracking Control}
-The user interface shall allow the user to enable or disable the object tracking system.
+%The user interface shall allow the user to enable or disable the object tracking system.
+Use the user interface to disable the Object Tracking System. Place a basketball-sized object (or larger) near a nozzle. Observe the the splash pad does not react to the presence of the object. 
 
 \subsubsection{Mechanical System}
-The mechanical system is the physical aspect of the system. The mechanical system produces all of the functional output of the system. 
+%The mechanical system is the physical aspect of the system. The mechanical system produces all of the functional output of the system. 
 
 \paragraph{Water Flow}
-The mechanical system shall be able to create seven water streams that are 6.0 ft or less. 
+%The mechanical system shall be able to create seven water streams that are 6.0 ft or less. 
+Turn on seven water streams. Observe that there are seven. Measure height of each water stream with a tape measure. Ensure that each stream rises at least 6.0 ft high.
 
 \paragraph{Water and Dust Resistance}
-The mechanical system shall conform to the IP65 standard.   
+%The mechanical system shall conform to the IP65 standard.   
+Throw dust or sand at enclosures on the mechanical system. Open enclosures and check for sand. If none is found, the device passes this test. 
+
+Use a garden hose with no nozzle to spray enclosures on the mechanical system. Dry off exterior of enclosures. Open enclosures and check for water. If no water is found, the device passes this test. 
 
 \paragraph{Operation Time}
-The mechanical system shall be able to operate continuously for 10 minutes. 
+%The mechanical system shall be able to operate continuously for 10 minutes. 
+Turn on the splash pad. Start a stopwatch. When the stopwatch reaches 10 minutes, ensure that the mechanical system is still operating. 
 
 \paragraph{Safety}
-The mechanical system shall not provide electrical shock to users. 
+%The mechanical system shall not provide electrical shock to users. 
 %Ask Dr. Cripps how to get access to standards. 
 %Answer: Use every-spec
+Turn on the splash pad. Touch each surface on the mechanical system. If a shock is felt, the system fails this test. 
 
 \subsubsection{Object Tracking System}
-The Object Tracking System is the part of the system that senses objects in the area surrounding the splash pad, and sends commands to the controller based on the position of objects detected.
+%The Object Tracking System is the part of the system that senses objects in the area surrounding the splash pad, and sends commands to the controller based on the position of objects detected.
 
-\paragraph{Minimum Object Size}
-The object tracking system shall be able to detect any object larger than an NBA regulation sized basketball that is within 2.0 ft of any nozzle.
+\paragraph{\label{object_test}Minimum Object Size}
+%The object tracking system shall be able to detect any object larger than an NBA regulation sized basketball that is within 2.0 ft of any nozzle.
+Enable the Object Tracking System. Roll a NBA regulation sized basketball towards a nozzle. If one of the fountains changes due to the presence of the basketball, then the system passes this test. 
 
 \paragraph{Lighting Levels}
-The object tracking system shall be able to function when the sun is 20 degrees above the horizon.%solar eclipses?  
+%The object tracking system shall be able to function when the sun is 20 degrees above the horizon.%solar eclipses?  
+Perform test \ref{object_test} when the sun is 20 degrees above the horizon. 
 
 \paragraph{Automatic Calibration}
-The Object Tracking System may be able to automatically adjust to differences if its position relative to the splash pad is changes. 
+%The Object Tracking System may be able to automatically adjust to differences if its position relative to the splash pad is changes. 
+Move the Object tracking system so that it is in a new location relative to the splash pad. Perform any steps required by the design to account for location adjustment. Perform test \ref{object_test}. 
 
 \subsection{Support Requirements}
 
@@ -180,30 +199,35 @@ The Object Tracking System may be able to automatically adjust to differences if
 \subsubsection{User Interface}
 
 \paragraph{Interface Platform}
-The User Interface may require an android phone for more advanced features. 
+%The User Interface may require an android phone for more advanced features. 
 
 \subsubsection{Mechanical System}
 
 \paragraph{Power Consumption}
-The system shall operate on 1000.0 Watts or less.
+%The system shall operate on 1000.0 Watts or less.
+Total the maximum power used by all of the components as stated in product specifications. Ensure that it is less than or equal to 1000.0 Watts. 
 
 \paragraph{Power Supply}
-The system shall be powered by a standard 120 V electrical outlet. 
+%The system shall be powered by a standard 120 V electrical outlet. 
+Ensure that the power source for the system is a 120 V electrical outlet. 
 
 \paragraph{Size}
-The system shall fit within a cube that is 10 ft on an edge.
+%The system shall fit within a cube that is 10 ft on an edge.
+Measure the dimensions of the system with a tape measure. Make sure the system is no longer than 10 feet on a side. 
 
 \subsubsection{Object Tracking System}
 
 \paragraph{Size}
-The object tracking system shall fit within a cube that is 6 inches on a side.
+%The object tracking system shall fit within a cube that is 6 inches on a side.
+Measure the dimensions of the Object Tracking System with a ruler. Ensure that the Object Tracking System is no longer than 6 inches on a side. 
 
 \paragraph{Container}
-The object tracking system shall have a case. 
+%The object tracking system shall have a case. 
+Visually inspect the object tracking system to ensure that there is a case. 
 
 \paragraph{Mounting}
-The object tracking system case shall have a mounting interface. 
-
+%The object tracking system case shall have a mounting interface. 
+Attempt to mount the object tracking system. If the object tracking system can be mounted without damaging the object tracking system or its case, it passes this test. 
 
 
 %
@@ -218,6 +242,28 @@ The object tracking system case shall have a mounting interface.
 \hline
 \textbf{Paragraph Number} & \textbf{Test Type}& 
 \textbf{Tester's Name} & \textbf{Pass/Fail} & \textbf{Date} \\
+\hline
+ & & & & \\
+\hline
+ & & & & \\
+\hline
+ & & & & \\
+\hline
+ & & & & \\
+\hline
+ & & & & \\
+\hline
+ & & & & \\
+\hline
+ & & & & \\
+\hline
+ & & & & \\
+\hline
+ & & & & \\
+\hline
+ & & & & \\
+\hline
+ & & & & \\
 \hline
  & & & & \\
 \hline
