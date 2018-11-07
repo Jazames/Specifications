@@ -20,7 +20,7 @@ See Figure \ref{fig:functional_diagram}.
 \subsection{Functional Requirements}
 
 \subsubsection{Controller}
-The controller is the part of the system that controls the physical outputs. 
+%The controller is the part of the system that controls the physical outputs. 
 
 \paragraph{Stream Control}
 The controller shall be able to turn on and off each water stream individually.
@@ -38,7 +38,7 @@ The controller shall be able to turn on a specified nozzle as directed by the Ob
 The controller shall have at least one pre-programmed fountain routine containing light changes and water streams turning on and off.
 
 \subsubsection{User Interface}
-The user interface is the part of the system that accepts input from the user and translates it into commands that the controller can execute. 
+%The user interface is the part of the system that accepts input from the user and translates it into commands that the controller can execute. 
 
 \paragraph{User Nozzle Control}
 The user interface shall allow the user to select what nozzle(s) are turned on.
@@ -50,30 +50,38 @@ The user interface shall allow the user to select what color the LEDs are.
 The user interface shall allow the user to enable or disable the object tracking system.
 
 \subsubsection{Mechanical System}
-The mechanical system is the physical aspect of the system. The mechanical system produces all of the functional output of the system. 
+%The mechanical system is the physical aspect of the system. The mechanical system produces all of the functional output of the system. 
 
 \paragraph{Water Flow}
-The mechanical system shall be able to create seven water streams that are 6.0 ft or less. 
+The mechanical system shall be able to create seven water streams that rise at least 6.0 ft vertically above the nozzle.
 
 \paragraph{Water and Dust Resistance}
-The mechanical system shall conform to the IP65 standard.   
+%The mechanical system shall conform to the IP65 standard.   
+The mechanical system shall be sprayproof. %Test in MIL-STD-108 in accordance with test described in 4.9
+The mechanical system shall be dust-tight. %Test in MIL-STD-810 in accordance with section 510.5. 
+
+%MIL-STD-108 has ingress protection information.
+%MIL-STD-810 has environmental protection information.
 
 \paragraph{Operation Time}
-The mechanical system shall be able to operate continuously for 10 minutes. 
+The mechanical system shall be able to operate for 10,000 hours. 
 
 \paragraph{Safety}
 The mechanical system shall not provide electrical shock to users. 
+%TODO: NEED TO WORK ON THIS
 %Ask Dr. Cripps how to get access to standards. 
 %Answer: Use every-spec
+
+
 
 \subsubsection{Object Tracking System}
 The Object Tracking System is the part of the system that senses objects in the area surrounding the splash pad, and sends commands to the controller based on the position of objects detected.
 
 \paragraph{Minimum Object Size}
-The object tracking system shall be able to detect any object larger than an NBA regulation sized basketball that is within 2.0 ft of any nozzle.
+The object tracking system shall be able to detect any object larger than a sphere with a 9.4 in. diameter that is within 2.0 ft of any nozzle.
 
 \paragraph{Lighting Levels}
-The object tracking system shall be able to function when the sun is 20 degrees above the horizon.%solar eclipses?  
+The object tracking system shall be able to function when the brightness level around the splash pad is at least 2000 lux.
 
 \paragraph{Automatic Calibration}
 The Object Tracking System may be able to automatically adjust to differences if its position relative to the splash pad is changes. 
@@ -81,11 +89,12 @@ The Object Tracking System may be able to automatically adjust to differences if
 \subsection{Support Requirements}
 
 \subsubsection{Device Controller}
-
+%TODO:  Come up with support requirements for this.
 \subsubsection{User Interface}
+%TODO:  Come up with support requirements for this.
 
 \paragraph{Interface Platform}
-The User Interface may require an android phone for more advanced features. 
+The User Interface shall require an android phone for more advanced features. 
 
 \subsubsection{Mechanical System}
 
@@ -94,9 +103,11 @@ The system shall operate on 1000.0 Watts or less.
 
 \paragraph{Power Supply}
 The system shall be powered by a standard 120 V electrical outlet. 
+%Needs to be safe.
 
 \paragraph{Size}
 The system shall fit within a cube that is 10 ft on an edge.
+%TODO: Mechanical constraints are light. 
 
 \subsubsection{Object Tracking System}
 
